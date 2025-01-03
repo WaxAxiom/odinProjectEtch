@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.cell {
+    background-color: white;
+    border: solid;
+    border-color: black;
+}
