@@ -3,8 +3,12 @@ body {
     flex-direction: column;
 }
 
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .cell {
     background-color: white;
-    border: solid;
-    border-color: black;
+    border: thin solid black;
 }
