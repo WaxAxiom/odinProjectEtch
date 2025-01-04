@@ -44,8 +44,20 @@ function createGrid(N) {
             square.style.height = squareSize;
             square.style.width = squareSize;
             square.setAttribute("class", "cell");
-            square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "black";
+
+            /** This is to enhance the feel by preventing dragging an element */
+            square.onmousedown = (e) => {
+                e.preventDefault();
+            }
+            square.addEventListener("mouseover", (e) => {
+                if(e.buttons === 1) {
+                    square.style.backgroundColor = "black";
+                }
+            });
+            square.addEventListener("mousedown", (e) => {
+                if(e.buttons === 1) {
+                    square.style.backgroundColor = "black";
+                }
             });
             
             row.appendChild(square);
